@@ -141,7 +141,7 @@ input[type=message]{
     transition: width 0.4s ease-in-out;
 }
 input[type=message]:focus {
-    width: 50%;
+    width: 40%;
 }
 input[type=button], input[type=submit], input[type=reset] {
 	font-family:"Space Mono";
