@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>bharat spice.</title>
+<link rel="stylesheet" href="css/styles.css"/>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/ScrollMagic.min.js"></script>
+<script src="js/animation.gsap.min.js"></script>
+<script src="js/debug.addIndicators.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Space+Mono' rel='stylesheet' type='text/css'>
+<script>
+$(document).ready(function() {
+	$('a[href*=#]').each(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+		&& location.hostname == this.hostname
+		&& this.hash.replace(/#/,'') ) {
+			var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+			var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+				if ($target) {
+					var targetOffset = $target.offset().top;
+					$(this).click(function() {
+	$("#nav li a").removeClass("active");
+	$(this).addClass('active');
+					$('html, body').animate({scrollTop: targetOffset}, 1000);
+					return false;
+				});
+			}
+		}
+	});
+});
+</script>
+<script>
+$(function() {
+  
+	// Init ScrollMagic Controller
+	var scrollMagicController = new ScrollMagic.Controller();
+
+	var arrowOpacityTween = TweenMax.to('#scrolldisappear', 0.5, {
+		opacity: 0
+	});
+	
+	var arrowOpacity = new ScrollMagic.Scene({
+    triggerElement: '#home',
+    offset: 447, /* How many pixels to scroll / animate */
+	duration: 200
+	})
+
+	.setTween(arrowOpacityTween)
+	.addTo(scrollMagicController);
+	
+	var arrowMoveTween = TweenMax.to('#scrolldisappear', 0.5, {
+		'padding-left':3000
+	});
+	
+	var arrowMove = new ScrollMagic.Scene({
+    triggerElement: '#home',
+    offset: 647, /* How many pixels to scroll / animate */
+	duration: 200
+	})
+
+	.setTween(arrowMoveTween)
+	.addTo(scrollMagicController);
+	
+	var scaleBoxTween = TweenMax.to('#logoanimation', 1.5, {
+		width: 400,
+		height: 100,
+		left: 10,
+		top: 10,
+		'background-color': 'rgba(255, 255, 255, 1)'
+	});
+	
+	var scaleBox = new ScrollMagic.Scene({
+    triggerElement: '#home',
+	offset: 447,
+	duration: 800
+	})
+	
+	.setTween(scaleBoxTween)
+	.addTo(scrollMagicController);
+	
+	var leftTween = TweenMax.to('#left', 1.5, {
+		width: 3
+	});
+	
+	var leftScene = new ScrollMagic.Scene({
+    triggerElement: '#home',
+	offset: 447,
+	duration: 800
+	})
+	
+	.setTween(leftTween)
+	.addTo(scrollMagicController);
+	
+	var rightTween = TweenMax.to('#right', 1.5, {
+		width: 3
+	});
+	
+	var rightScene = new ScrollMagic.Scene({
+    triggerElement: '#home',
+	offset: 447,
+	duration: 800
+	})
+	
+	.setTween(rightTween)
+	.addTo(scrollMagicController);
+	
+	var topTween = TweenMax.to('#top', 1.5, {
+		height: 3
+	});
+	
+	var topScene = new ScrollMagic.Scene({
+    triggerElement: '#home',
+	offset: 447,
+	duration: 800
+	})
+	
+	.setTween(topTween)
+	.addTo(scrollMagicController);
+	
+	var bottomTween = TweenMax.to('#bottom', 1.5, {
+		height: 3
+	});
+	
+	var bottomScene = new ScrollMagic.Scene({
+    triggerElement: '#home',
+	offset: 447,
+	duration: 800
+	})
+	
+	.setTween(bottomTween)
+	.addTo(scrollMagicController);
+	
+	var changeFontTween = TweenMax.to('#homehead', 1.5, {
+		fontSize: 30,
+		'padding-bottom': '10px'
+	});
+	
+	var changeFont = new ScrollMagic.Scene({
+    triggerElement: '#home',
+	offset: 447,
+	duration: 800
+	})
+	
+	.setTween(changeFontTween)
+	.addTo(scrollMagicController);
+	
+	var navOpacityTween = TweenMax.to('#nav', 1.5, {
+		opacity: 1,
+	});
+	
+	var navOpacity = new ScrollMagic.Scene({
+    triggerElement: '#home',
+	offset: 800,
+	duration: 600
+	})
+	
+	.setTween(navOpacityTween)
+	.addTo(scrollMagicController);
+	
+	var menuOpacityTween = TweenMax.to('#menutext', 1.5, {
+		opacity: 1,
+		transform: 'translate3d(0, 8vh, 0)',
+		ease: Sine.easeIn
+	});
+	
+	var menuOpacity = new ScrollMagic.Scene({
+    triggerElement: '#home',
+	offset: 1000,
+	duration: 200
+	})
+	
+	.setTween(menuOpacityTween)
+	.addTo(scrollMagicController);
+	
+	var menuImageOpacityTween = TweenMax.to('#menuimage', 1.5, {
+		opacity: 1,
+		transform: 'translate3d(0, 260px, 0)',
+		ease: Power0.easeIn
+	});
+	
+	var menuImageOpacity = new ScrollMagic.Scene({
+    triggerElement: '#home',
+	offset: 900,
+	duration: 900
+	})
+	
+	.setTween(menuImageOpacityTween)
+	.addTo(scrollMagicController);
+	
+	var aboutustextTween = TweenMax.to('#aboutustext', 1.5, {
+		transform: 'translate3d(0, 500px, 0)',
+		ease: Power0.easeIn
+	});
+	
+	var aboutustext = new ScrollMagic.Scene({
+    triggerElement: '#aboutus',
+	offset: 0,
+	duration: 1200
+	})
+	
+	.setTween(aboutustextTween)
+	.addTo(scrollMagicController);
+	
+	var aboutusOpacityTween = TweenMax.to('#aboutustext', 1.5, {
+		opacity: 0,
+		ease: Sine.easeIn
+	});
+	
+	var aboutusOpacity = new ScrollMagic.Scene({
+    triggerElement: '#aboutus',
+	offset: 510,
+	duration: 500
+	})
+	
+	.setTween(aboutusOpacityTween)
+	.addTo(scrollMagicController);
+
+	aboutustext.addIndicators();
+	aboutusOpacity.addIndicators();
+  
+});
+</script>
+</head>
+
+<body>
+<!--HEADER-->
+<header id="header">
+<div class="content">
+<!--div id="logo"> <a href="#home" class="active">bharat spice</a></div-->
+<nav id="nav">
+	<ul>
+	<li><a href="#menu" title="Next Section">menu</a></li>
+	<li><a href="#aboutus" title="Next Section">about us</a></li>
+	<li><a href="#contactus" title="Next Section">contact us</a></li>
+</nav>
+</div>
+</header>
+<!--HEADER ENDS-->
+
+<!--SLIDES-->
+<div id="logoanimation">
+	<div id="top"></div>
+	<div id="bottom"></div>
+	<div id="left"></div>
+	<div id="right"></div>
+	<div id="homehead"><a href="#home">bharat spice</a></div>
+	<div id="scrolldisappear">
+	<a href="#menu"><h2 class="homedesc">&#8675;</h2></a>
+	</div>
+</div>
+<div id="home">
+	<div class="content">
+	</div> 
+</div>
+<div id="menu">
+	<div class="content">
+	<div id="menuimage">
+	<img src="resources/tofumanchurian.png"/>
+	</div>
+	<div id="menutext">
+	<h1 class="menuhead"><a href="menu.html">menu ></a></h1>
+	<h2 class="menudesc">browse our expansive, mouth-watering menu and explore a range of cultures</h2>
+	</div> 
+</div>
+</div>
+<div id="aboutus">
+	<div class="content">
+	<div id="aboutustext">
+	<h1 class="aboutushead">about us</h1>
+	<h2 class="aboutusdesc">indian food, cooked by indians.</h2>
+	</div>
+	<div id="aboutusimage">
+	<img src="resources/aboutus_silhouette.png"/>
+	</div>
+</div> 
+</div>
+<div id="contactus">
+	<div class="content">
+	<div id="contactustext">
+	<h1 class="contactushead">contact us</h1>
+	<h2 class="contactusdesc">some text here.</h2>
+	</div> 
+</div>
+</div>
+<!--SLIDES END-->
+</body>
+</html>

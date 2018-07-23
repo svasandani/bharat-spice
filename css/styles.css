@@ -1,0 +1,235 @@
+body{
+margin: 0;
+padding: 0;
+width: 100%;
+}
+body.out{
+	transform: translate3d(0, -2000px, 0);
+}
+h1 {
+font-family:"Raleway";
+font-weight:normal;
+font-size: 45px;
+text-align: center;
+color: #000;
+margin: 0;
+padding: 0;
+}
+h2 {
+font-family:"Space Mono";
+font-weight: normal;
+font-size: 30px;
+text-align: center;
+color: #000;
+margin: 0;
+padding: 0;
+}
+#logoanimation {
+background-color: rgba(255, 255, 255, 0);
+color: #333333;
+height: 100vh;
+margin-top: 0 0 0 0;
+z-index: 10;
+overflow: hidden;
+width:100%;
+padding: 0 0 0 0;
+position:fixed;
+top:0;
+left:0;
+}
+.clear {
+    clear:both;
+    line-height:0;
+}
+#homehead {
+font-family:"Raleway";
+font-weight:normal;
+text-align: right;
+font-size: 85px;
+padding-right:0px;
+padding-bottom: 200px;
+position: absolute;
+bottom:0;
+width:90%;
+}
+#homehead a:link {
+    color: #000;
+	text-decoration: none;
+}
+#homehead a:visited {
+    color: #000;
+	text-decoration: none;
+}
+h2.homedesc {
+text-align: center;
+font-weight: bold;
+padding-left:0;
+padding-bottom:40px;
+position: absolute;
+bottom:0;
+width:100%;
+opacity:0.4;
+animation: bounce 0.5s;
+animation-direction: alternate;
+animation-timing-function: cubic-bezier(.5,0.05,1,.5);
+animation-iteration-count: infinite;
+}
+h2.homedesc a:link {
+    color: #000;
+	text-decoration: none;
+}
+h2.homedesc a:visited {
+    color: #000;
+	text-decoration: none;
+}
+@keyframes bounce {
+  from { transform: translate3d(0, 0, 0);     }
+  to   { transform: translate3d(0, 20px, 0); }
+}
+h1.menuhead {
+text-align: left;
+}
+h1.menuhead a:link {
+    color: #000;
+	text-decoration: none;
+}
+h1.menuhead a:visited {
+    color: #000;
+	text-decoration: none;
+}
+h2.menudesc {
+text-align: left;
+}
+h1.aboutushead {
+text-align: right;
+color: #fff;
+}
+h2.aboutusdesc {
+text-align: right;
+color: #fff;
+}
+h1.contactushead {
+text-align: left;
+}
+h2.contactusdesc {
+text-align: center;
+}
+
+.center { margin: 0 auto; }
+.content{ margin: 0 auto; width: 100%; }
+.clear { clear: both; }
+
+#top, #bottom, #left, #right {
+	background: #000;
+	position: absolute;
+}
+#left, #right {
+	top: 0; bottom: 0;
+	width: 15px;
+}
+#left { left: 0; }
+#right { right: 0; }
+	
+#top, #bottom {
+	left: 0; right: 0;
+	height: 15px;
+}
+#top { top: 0; }
+#bottom { bottom: 0; }
+
+#header {
+width: 100%;
+background: url('../resources/header-bg.png');
+height: 100px;
+position: fixed;
+margin-top: 0px;
+z-index: 10;
+}
+#nav { width: 75vw; float: right; margin-top: 30px; padding-right: 15px; opacity: 0;}
+#logo a { color: #000; text-decoration: none; float: left; font-size: 30px; margin-top: 30px; color: #000; font-family:"Raleway"; font-weight: regular; padding-left:50px; }
+#nav ul{
+list-style: none;
+display: block;
+margin: 0 auto;
+list-style: none;
+}
+#nav li{
+margin-top: 9px;
+float: left;
+padding-left: 15vw;
+}
+#nav li a { color: #000; opacity:0.6; font-size: 16px; text-decoration: none; font-family: 'Space Mono'; }
+#nav li a.active { color: #000; opacity:0.6;}
+#nav li a:hover { color: #000; opacity:1; border-bottom: 2px solid #000; }
+
+#home, #menu{ width: 100%; }
+#home{
+background-color: #fff;
+color: #333333;
+height: 100vh;
+margin-top: 0 0 0 0;
+overflow: hidden;
+width:100%;
+padding: 0 0 0 0;
+}
+#menu{
+background-color: #ef9b86;
+color: #333333;
+height: 1020px;
+overflow: hidden;
+padding: 0 0 20px 0;
+box-sizing:border-box;
+width:100%;
+}
+#menuimage {
+width:42%;
+margin-right:8%;
+margin-left:3%;
+float: left;
+opacity: 1;
+}
+#menutext {
+width:42%;
+float:left;
+padding-top: 32vh;
+padding-bottom: 17%;
+opacity: 0;
+}
+#aboutus{
+background: url(../resources/backplateaboutus.png) 50% 0 no-repeat fixed;
+color: #fff;
+height: 1020px;
+padding: 0vh 0 0 0;
+background-size: 120%;
+box-sizing:border-box;
+position:relative;
+}
+#aboutusimage {
+width:22%;
+margin-right:8%;
+margin-left:3%;
+float: left;
+opacity: 1;
+position: absolute;
+bottom:0px;
+left:40vw;
+}
+#aboutustext {
+width:39%;
+float:left;
+padding-top:30vh;
+opacity:1;
+}
+#contactus{
+background-color: #fff;
+color: #fff;
+height: 100vh;
+padding-top: 200px;
+padding-bottom: 200px;
+box-sizing:border-box;
+}
+#contactustext {
+width:100%;
+text-align:center;
+padding-top:0vh;
+}
