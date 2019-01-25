@@ -183,6 +183,7 @@ main a {
 
   #about-us .content-wrapper {
     align-self: end;
+    margin-bottom: 10px;
   }
 
   #menu-image-wrapper, #about-image-wrapper {
