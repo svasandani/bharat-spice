@@ -162,7 +162,7 @@ main a {
 
   #menu {
     grid-template-columns: 100%;
-    grid-template-rows: 57% 43%;
+    grid-template-rows: 50% 50%;
     justify-items: center;
   }
 
